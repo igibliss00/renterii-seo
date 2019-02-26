@@ -45,75 +45,114 @@ h2 {
 }
 
 .front {
-  transform: translateZ(100px);
+  -webkit-transform: translateZ(100px);
+          transform: translateZ(100px);
 }
 
 .back {
-  transform: translateZ(-100px) rotateY(180deg);
+-webkit-transform: translateZ(-100px) rotateY(180deg);
+        transform: translateZ(-100px) rotateY(180deg);
 }
 
 .right {
-  transform: rotateY(-270deg) translateX(100px);
-  transform-origin: top right;
+-webkit-transform: rotateY(-270deg) translateX(100px);
+        transform: rotateY(-270deg) translateX(100px);
+-webkit-transform-origin: top right;
+    -ms-transform-origin: top right;
+        transform-origin: top right;
 }
 
 .left {
-  transform: rotateY(270deg) translateX(-100px);
-  transform-origin: center left;
+-webkit-transform: rotateY(270deg) translateX(-100px);
+        transform: rotateY(270deg) translateX(-100px);
+-webkit-transform-origin: center left;
+    -ms-transform-origin: center left;
+        transform-origin: center left;
 }
 
 .top {
-  transform: rotateX(-270deg) translateY(-100px);
-  transform-origin: top center;
+-webkit-transform: rotateX(-270deg) translateY(-100px);
+        transform: rotateX(-270deg) translateY(-100px);
+-webkit-transform-origin: top center;
+    -ms-transform-origin: top center;
+        transform-origin: top center;
 }
 
 .bottom {
-  transform: rotateX(270deg) translateY(100px);
-  transform-origin: bottom center;
+-webkit-transform: rotateX(270deg) translateY(100px);
+        transform: rotateX(270deg) translateY(100px);
+-webkit-transform-origin: bottom center;
+    -ms-transform-origin: bottom center;
+        transform-origin: bottom center;
+}
+
+@-webkit-keyframes rotate {
+from {
+  -webkit-transform: rotateX(0deg) rotateY(0deg);
+          transform: rotateX(0deg) rotateY(0deg);
+}
+
+to {
+  -webkit-transform: rotateX(360deg) rotateY(360deg);
+          transform: rotateX(360deg) rotateY(360deg);
+}
 }
 
 @keyframes rotate {
-  from {
-    transform: rotateX(0deg) rotateY(0deg);
-  }
-  
-  to {
-    transform: rotateX(360deg) rotateY(360deg);
-  }
+from {
+  -webkit-transform: rotateX(0deg) rotateY(0deg);
+          transform: rotateX(0deg) rotateY(0deg);
+}
+
+to {
+  -webkit-transform: rotateX(360deg) rotateY(360deg);
+          transform: rotateX(360deg) rotateY(360deg);
+}
 }
 
 .cube {
-  animation: rotate 20s infinite linear;
+-webkit-animation: rotate 20s infinite linear;
+        animation: rotate 20s infinite linear;
 }
 
 /* landing page cube hover response */
 
 .wrap:hover .front {
-  transform: translateZ(200px);
+-webkit-transform: translateZ(200px);
+        transform: translateZ(200px);
 }
 
 .wrap:hover .back {
-  transform: translateZ(-200px) rotateY(180deg);
+-webkit-transform: translateZ(-200px) rotateY(180deg);
+        transform: translateZ(-200px) rotateY(180deg);
 }
 
 .wrap:hover .right {
-  transform: rotateY(-270deg) translateZ(100px) translateX(100px);
+-webkit-transform: rotateY(-270deg) translateZ(100px) translateX(100px);
+        transform: rotateY(-270deg) translateZ(100px) translateX(100px);
 }
 
 .wrap:hover .left {
-  transform: rotateY(270deg) translateZ(100px) translateX(-100px);
+-webkit-transform: rotateY(270deg) translateZ(100px) translateX(-100px);
+        transform: rotateY(270deg) translateZ(100px) translateX(-100px);
 }
 
 .wrap:hover .top {
-  transform: rotateX(-270deg) translateZ(100px) translateY(-100px);
+-webkit-transform: rotateX(-270deg) translateZ(100px) translateY(-100px);
+        transform: rotateX(-270deg) translateZ(100px) translateY(-100px);
 }
 
 .wrap:hover .bottom {
-  transform: rotateX(270deg) translateZ(100px) translateY(100px);
+-webkit-transform: rotateX(270deg) translateZ(100px) translateY(100px);
+        transform: rotateX(270deg) translateZ(100px) translateY(100px);
 }
 
 .cube > div {
-    transition: transform 0.2s ease-in;
+  -webkit-transition: -webkit-transform 0.2s ease-in;
+  transition: -webkit-transform 0.2s ease-in;
+  -o-transition: transform 0.2s ease-in;
+  transition: transform 0.2s ease-in;
+  transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
 }
 
 /* content page */
