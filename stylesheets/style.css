@@ -119,7 +119,7 @@ h2 {
 /* content page */
 
 .content {
-  height: 2000px;
+  /* height: 700px; */
   padding: 100px 0;
   background: url('')
 }
@@ -186,8 +186,11 @@ ul li {
 
 
 @media screen and (max-width: 1000px) {
+  h2 {
+    font-size: 2.9em;
+  }
   .keyword-lists {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
 }
 
